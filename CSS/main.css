@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(243, 147, 219);
+}
+
+header{
+    background-color: rgb(230, 173, 216);
+    font-family: "Anton", sans-serif;
+    color: white;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px black;
+}
+div{
+    text-align: center;
+}
+h2{
+    font-size: 50px;
+    padding: 0%;
+}
+h3{
+    font-size: 30px;
+    padding: 0%;
+}
+p{
+    font-size: 20px;
+    padding: 0%;
+}
+img{
+    background-color: rgb(230, 173, 216);
+    float: left;
+    height: 15%;
+    width: 15%;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+@font-face {
+    font-family: 'Anton';
+    src: url('../fonts/Anton-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}

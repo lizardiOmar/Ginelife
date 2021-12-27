@@ -1,0 +1,73 @@
+body{
+    background-color: rgb(230, 173, 216);
+    text-align: center;
+    font-family: "Anton", sans-serif;
+}
+label{
+    font-size: 20px;
+    color: white;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px black;
+    padding: 15px;
+}
+header{
+    background-color: rgba(235, 142, 212, 0.5);
+}
+img{
+    height: 200px;
+    width: 200px;
+}
+form{
+    margin: auto;
+    width: 50%;
+    padding: 15px;
+    background-color: rgba(235, 142, 212, 0.5);
+}
+input{
+    border: none;
+    background-color: rgba(235, 142, 212, 0.979);
+    width: 75%;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    
+}
+input:focus{
+    border: none;
+    background-color: rgba(243, 177, 226, 0.979);
+    width: 75%;
+    padding: 15px;
+    color: white;
+    text-align: center;
+}
+input:hover{
+    border: none;
+    background-color: rgba(243, 177, 226, 0.979);
+    width: 75%;
+    padding: 15px;
+    color: white;
+    text-align: center;
+}
+button{
+    background-color: rgba(233, 10, 177, 1);
+    border: none;
+    width: 40%;
+    margin: auto;
+    padding: 15px;
+    font-family: "Anton", sans-serif;
+    color: white;
+    letter-spacing: 5px;
+    align-content: center;
+    font-size: 30px;
+}
+footer{
+    color: rgb(3, 4, 5);
+    text-shadow: 1px 1px rgb(255, 255, 255);
+    background-color: rgba(235, 142, 212, 0.5);
+}
+@font-face {
+    font-family: 'Anton';
+    src: url('../fonts/Anton-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+  }
