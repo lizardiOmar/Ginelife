@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name='NUEVA PACIENTE' content='width=device-width, initial-scale=1'>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <link rel='stylesheet' type='text/css' media='screen' href='../CSS/AntecedentesHeredoFam.css'>
+    </head>
+    <body>
+        <h1 id="tituloH1"></h1>
+        <form>
+            <br>
+            <label for="diabetes">Diabetes:</label>
+            <input type="checkbox" name="diabetes" id="diabetes">
+            <br>
+            <label for="cardiopatias">Cardiopatías:</label>
+            <input type="checkbox" name="cardiopatias" id="cardiopatias">
+            <br>
+            <label for="HTA">HTA:</label>
+            <input type="checkbox" name="HTA" id="HTA">
+            <br>
+            <label for="tiroides">Tiroides:</label>
+            <input type="checkbox" name="tiroides" id="tiroides">
+            <br>
+            <label for="neoplasticos">Neoplásticos:</label>
+            <input type="checkbox" name="neoplasticos" id="neoplasticos">
+            <br>
+            <label for="especificaciones">Especificaciones:</label>
+            <br>
+            <textarea cols="40" rows="5" name="especificaciones" id="especificaciones"></textarea>
+        </form>
+        <div>
+            <button type="button" id="Continuar" class="Continuar">Continuar</button>
+            <button type="button" id="Omitir" class="Omitir">Omitir</button>
+            <button type="button" id="Terminado" class="Terminado">Terminado</button>
+        </div>
+        <script src="../JS/AntecedentesHeredoFam.js"></script>
+    </body>
+</html>

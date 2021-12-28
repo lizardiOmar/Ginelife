@@ -32,6 +32,40 @@ img{
     padding-top: 10px;
     padding-right: 10px;
 }
+button{
+    border: none;
+    width: 20%;
+    padding: 15px;
+    height: 100px;
+    font-family: "Anton", sans-serif;
+    font-size: 30px;
+    text-shadow: 2px 2px black;
+    color:azure
+}
+button.exit{
+    background-color: red;
+}
+button.exit:hover{
+    background-color: rgb(134, 8, 8);
+}
+button.misPacientes{
+    background-color: rgb(252, 0, 239);
+}
+button.misPacientes:hover{
+    background-color: rgb(146, 12, 139);
+}
+button.pacienteNuevo{
+    background-color: pink;
+}
+button.pacienteNuevo:hover{
+    background-color: rgb(177, 133, 140);
+}
+button.misCitas{
+    background-color: blue;
+}
+button.misCitas:hover{
+    background-color: rgb(3, 3, 168);
+}
 @font-face {
     font-family: 'Anton';
     src: url('../fonts/Anton-Regular.ttf') format('truetype');
