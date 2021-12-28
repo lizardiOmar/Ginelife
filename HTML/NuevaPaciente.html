@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name='NUEVA PACIENTE' content='width=device-width, initial-scale=1'>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <link rel='stylesheet' type='text/css' media='screen' href='../CSS/nuevaPaciente.css'>
+    </head>
+    <body>
+        <form>
+            <h1>Nueva paciente</h1>
+            <br>
+            <label for="Nombres">Nombres:</label>
+            <br>
+            <input type="text" name="Nombres" id="Nombres" required>
+            <br>     
+            <label for="Apellidos">Apellidos:</label>
+            <br>
+            <input type="text" name="Apellidos" id="Apellidos" required>
+            <br>
+            <label for="Edad">Edad:</label>
+            <br>
+            <input type="number" name="Edad" id="Edad" required>
+            <br>
+            <label for="Estado_civil">Estado civil:</label>
+            <br>
+            <input type="text" name="Estado_civil" id="Estado_civil" required>
+            <br>
+            <label for="Ocupacion">Ocupación:</label>
+            <br>
+            <input type="text" name="Ocupacion" id="Ocupacion" required>
+            <br>
+            <label for="Escolaridad">Escolaridad:</label>
+            <br>
+            <input type="text" name="Escolaridad" id="Escolaridad" required>
+            <br>
+            <label for="CiudadNacimiento">Ciudad de nacimiento:</label>
+            <br>
+            <input type="text" name="CiudadNacimiento" id="CiudadNacimiento" required>
+            <br>
+        </form>
+        <div>
+            <button type="button" id="Registrar_paciente" class="pacienteNew">Continuar</button>
+            <button type="button" id="cancelar" class="cancelar">Cancelar</button>
+        </div>
+        <script src="../JS/nuevaPaciente.js"></script>
+    </body>
+</html>
