@@ -66,5 +66,29 @@
 				return json_encode($response);
 			}
 		}
+		public static function getDoctoraById($idDoctora){
+			$response = null;
+			$conn=new Conexion();
+			$sql = "SELECT * FROM doctoras where idDoctoras=$idDoctora";
+			try {
+				
+				$stmt = $conn->getConexion()->query($sql);
+				$result = $stmt->setFetchMode(PDO::FETCH_NUM);
+				while ($row = $stmt->fetch()) {
+					$Doctora =  new Doctora($row[0], $row[1], $row[2], $row[3],  $row[4], $row[5], $row[6], $row[7]);
+				}
+				$conn=null;
+				echo json_encode($Doctora);
+				return json_encode($Doctora);
+			} catch (PDOException $e) {
+				$response = null;
+				$response = array(
+					"estado"=>"FALLIDO",
+					"cliente"=>"NULL"
+				);
+				
+				return json_encode($response);
+			}
+		}
 	}
 ?>
