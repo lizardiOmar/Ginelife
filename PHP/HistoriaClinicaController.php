@@ -20,7 +20,11 @@
 			){
 				HistoriaClinica::getHistoriaClinicaByHoraPaciente($_GET['hora'], $_GET['idPaciente']);
 			}
-			
+			if (
+				isset($_GET['idHistoriaClinica'])
+			){
+				HistoriaClinica::getHistoriaClinicaById($_GET['idHistoriaClinica']);
+			}
 	}
 
 ?>
