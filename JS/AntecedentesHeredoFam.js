@@ -28,6 +28,12 @@ axios.get('http://localhost/PHP/HistoriaClinicaController.php?idPaciente='+idPac
             })
         }
         document.getElementById('Continuar').addEventListener('click', registrarAntecedentes);
+        document.getElementById('Omitir').addEventListener('click', omitir);
+        function omitir(e){
+            window.location.href = "C:/Users/heand/Desktop/GINELIFE/HTML/AntecedentesPersonalesPatologicos.html?idHistoriaClinica="+HistoriaClinica.idHistoriaClinica;
+        }
+       
+        
         function registrarAntecedentes(e){
             var inputDiabetes=document.getElementById('diabetes').checked;
             var inputCardio=document.getElementById('cardiopatias').checked;
@@ -69,18 +75,11 @@ axios.get('http://localhost/PHP/HistoriaClinicaController.php?idPaciente='+idPac
             .then(function (response) {
                 console.log(response);
                 window.location.href = "C:/Users/heand/Desktop/GINELIFE/HTML/AntecedentesPersonalesPatologicos.html?idHistoriaClinica="+HistoriaClinica.idHistoriaClinica;
-                //  alert("Cargando información Dra. "+doctora.Nombres);
-                //
             })
             .catch(function (error) {
-                // handle error
                 console.log(error);
                 alert("Error inesperado");
             });
-
-            //alert('diabetes: '+diabetes+' cardio: '+cardio+' HTA: '+HTA+' tiroides: '+tiroides+' neoplast: '+neoplasticos);
-            //alert(especificaciones);
-
         }
     })
 })

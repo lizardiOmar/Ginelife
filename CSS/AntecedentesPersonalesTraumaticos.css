@@ -2,14 +2,20 @@ body{
     background-color: rgb(243, 147, 219);
     font-family: "Anton", sans-serif;
 }
+input{
+    background-color: rgba(245, 168, 226, 0.979);
+    padding: 10px;
+    color: darkmagenta;
+    font-size: 20px;
+}
 h1{
-    color: white;
+    color: black;
     letter-spacing: 5px;
     font-size: 30px;
-    text-shadow: 2px 2px black;
+    text-shadow: 2px 2px white;
     text-align: center;
-
 }
+
 form{
     width: 400px;
     margin: auto;
@@ -21,14 +27,11 @@ div{
 textarea{
     width: 100%;
 }
-input{
+textarea{
     background-color: rgba(245, 168, 226, 0.979);
     padding: 10px;
     color: darkmagenta;
-    font-size: 40px;
-    width: 20px;
-    height: 20px;
-    float: right;
+    font-size: 20px;
 }
 label{
     font-size: 20px;
@@ -67,6 +70,27 @@ button.Terminado{
 }
 button.Terminado:hover{
     background-color: rgb(155, 0, 0);
+    color:white;
+}
+button.Otro{
+    background-color: green;
+}
+button.Otro:hover{
+    background-color: rgb(2, 63, 2);
+    color:white;
+}
+button.Ginecologica{
+    background-color: pink;
+}
+button.Ginecologica:hover{
+    background-color: rgb(177, 133, 140);
+    color:white;
+}
+button.Obstetrica{
+    background-color: green;
+}
+button.Obstetrica:hover{
+    background-color: rgb(2, 63, 2);
     color:white;
 }
 @font-face {

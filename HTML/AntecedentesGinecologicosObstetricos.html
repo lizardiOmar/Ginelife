@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name='NUEVA PACIENTE' content='width=device-width, initial-scale=1'>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <link rel='stylesheet' type='text/css' media='screen' href='../CSS/antecedentesGO.css'>
+    </head>
+    <body>
+        <h1>Antecedentes ginecológicos y obstétricos</h1>
+        <form>
+            <br>
+                <label for="menarca">Menarca:</label><input type="text" name="menarca" id="menarca" class="row_1" required>
+                <label for="ritmo">Ritmo:</label><input type="text" name="ritmo" id="ritmo" class="row_1" required>
+                <label for="IVS">I.V.S.</label><input type="text" name="IVS" id="IVS" class="row_1" required>
+            <br>
+                <label for="NoCompSex">Número de compañeros Sexuales:</label><input type="number" name="NoCompSex" id="NoCompSex" required>
+                <label for="G">G.</label><input type="text" name="G" id="G" required>
+                <label for="P">P.</label><input type="text" name="P" id="P" required>
+                <label for="A">A.</label><input type="text" name="A" id="A" required>
+                <label for="C">C.</label><input type="text" name="C" id="C" required>
+            <br>
+                <label for="ectopico">Ectópico:</label><input type="text" name="ectopico" id="ectopico" class="row_3" required>
+                <label for="molar">Molar:</label><input type="text" name="molar" id="molar" class="row_3" required>
+            <br>
+                <label for="FUP">FUP:</label><input type="text" name="FUP" id="FUP" class="row_4" required>
+                <label for="FUM">FUM</label><input type="text" name="FUM" id="FUM" class="row_4" required>
+                <label for="FPP">FPP</label><input type="text" name="FPP" id="FPP" class="row_4" required>
+            <br>
+        </form>
+        <div>
+            <button type="button" id="Continuar" class="Continuar">Continuar</button>
+            <button type="button" id="Omitir" class="Omitir">Omitir</button>
+            <button type="button" id="Terminado" class="Terminado">Terminado</button>
+        </div>
+        <script src="../JS/antecedentesGO.js"></script>
+    </body>
+</html>

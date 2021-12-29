@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name='NUEVA PACIENTE' content='width=device-width, initial-scale=1'>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <link rel='stylesheet' type='text/css' media='screen' href='../CSS/AntecedentesPersonalesTraumaticos.css'>
+    </head>
+    <body>
+        <h1 id="tituloH1"></h1>
+        <form>
+            <br>
+            <label for="Nombre">Nombre:</label>
+            <br>
+            <input type="text" name="Nombre" id="Nombre" placeholder="Nombre del antecedente" required>
+            <br>     
+            <label for="Descripcion">Descripción:</label>
+            <br>
+            <textarea cols="40" rows="5" name="Descripcion" id="Descripcion" placeholder="Descripción del antecedente" required></textarea>
+            <br>
+            <label for="YYYY">Año:</label>
+            <br>
+            <input type="number" name="YYYY" id="YYYY" maxlength="4" placeholder="YYYY" required>
+            <br>
+        </form>
+        <div>
+            <button type="button" id="Continuar" class="Continuar">Continuar</button>
+            <button type="button" id="Otro" class="Otro">Otro</button>
+            <button type="button" id="Omitir" class="Omitir">Omitir</button>
+            <button type="button" id="Terminado" class="Terminado">Terminado</button>
+        </div>
+        <script src="../JS/AntecedentesPersonalesTraumaticos.js"></script>
+    </body>
+</html>

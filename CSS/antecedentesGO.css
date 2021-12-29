@@ -2,40 +2,68 @@ body{
     background-color: rgb(243, 147, 219);
     font-family: "Anton", sans-serif;
 }
+@font-face {
+    font-family: 'Anton';
+    src: url('../fonts/Anton-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
 h1{
-    color: white;
+    color: black;
     letter-spacing: 5px;
     font-size: 30px;
-    text-shadow: 2px 2px black;
+    text-shadow: 2px 2px white;
     text-align: center;
-
 }
 form{
-    width: 400px;
+    width: 80%;
     margin: auto;
-    padding: 10px;
-}
-div{
+    padding: 20px;
     text-align: center;
-}
-textarea{
-    width: 100%;
 }
 input{
     background-color: rgba(245, 168, 226, 0.979);
-    padding: 10px;
+    padding: 5px;
     color: darkmagenta;
-    font-size: 40px;
-    width: 20px;
+    font-size: 15px;
     height: 20px;
-    float: right;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: rgb(255, 142, 161);
 }
 label{
     font-size: 20px;
     color: black;
     letter-spacing: 5px;
-    text-shadow: 2px 2px white;
     padding: 10px;
+}
+.row_1{
+    width: 18.25%;
+}
+#NoCompSex{
+    width: 5%;
+}
+#G{
+    width: 5%;
+}
+#P{
+    width: 5%;
+}
+#A{
+    width: 5%;
+}
+#C{
+    width: 5%;
+}
+.row_3{
+    width: 32%;
+}
+.row_4{
+    width: 22%;
+}
+div{
+    text-align: center;
 }
 button{
     border: none;
@@ -68,10 +96,4 @@ button.Terminado{
 button.Terminado:hover{
     background-color: rgb(155, 0, 0);
     color:white;
-}
-@font-face {
-    font-family: 'Anton';
-    src: url('../fonts/Anton-Regular.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
 }
