@@ -10,3 +10,10 @@ ADD COLUMN `YYYY` VARCHAR(4) NOT NULL AFTER `Descripcion`,
 ADD COLUMN `idHistoriaClinica` INT NOT NULL AFTER `YYYY`;
 ALTER TABLE antecedentespersonalesquirurgicos
 ADD FOREIGN KEY (idHistoriaClinica) REFERENCES HistoriaClinica(idHistoriaClinica);
+CREATE TABLE `padecimientoactual` (
+  `idpadecimientoActual` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(45) NOT NULL,
+  `descripcion` text NOT NULL,
+  `idHojaClinica` int(11) NOT NULL,
+  PRIMARY KEY (`idpadecimientoActual`)
+);
