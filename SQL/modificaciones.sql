@@ -76,3 +76,28 @@ CREATE TABLE `ginelife`.`plan` (
   PRIMARY KEY (`idplan`));
 ALTER TABLE plan
 ADD FOREIGN KEY (idHistoriaClinica) REFERENCES historiaclinica(idHistoriaClinica);
+CREATE TABLE `ginelife`.`abdomen_o` (
+  `idabdomen_o` INT NOT NULL AUTO_INCREMENT,
+  `abdomenGloboso` BIT NOT NULL,
+  `fondoUterino` VARCHAR(45) NOT NULL,
+  `uteroOcupado` BIT NOT NULL,
+  `unicoMultiple` BIT NOT NULL,
+  `numero` INT NOT NULL,
+  `vivo` BIT NOT NULL,
+  `longitudinal` BIT NOT NULL,
+  `transverso` BIT NOT NULL,
+  `otro` VARCHAR(45) NOT NULL,
+  `cefalico` BIT NOT NULL,
+  `pelvico` BIT NOT NULL,
+  `presentacionOtro` VARCHAR(45) NOT NULL,
+  `dorsoIZQ` BIT NOT NULL,
+  `dorsoDER` BIT NOT NULL,
+  `FCF` VARCHAR(45) NOT NULL,
+  `ritmo` VARCHAR(45) NOT NULL,
+  `normal` BIT NOT NULL,
+  `anormal` BIT NOT NULL,
+  `especifique` VARCHAR(45) NOT NULL,
+  `idHistoriaClinica` INT NOT NULL,
+  PRIMARY KEY (`idabdomen_o`));
+  ALTER TABLE abdomen_o
+ADD FOREIGN KEY (idHistoriaClinica) REFERENCES historiaclinica(idHistoriaClinica);
