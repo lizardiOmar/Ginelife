@@ -143,3 +143,13 @@ CREATE TABLE `ginelife`.`alturapresentacion` (
   PRIMARY KEY (`idalturaPresentacion`));
 ALTER TABLE alturapresentacion
 ADD FOREIGN KEY (idHistoriaClinica) REFERENCES historiaclinica(idHistoriaClinica);
+CREATE TABLE `ginelife`.`otros_o` (
+  `idotros_O` INT NOT NULL AUTO_INCREMENT,
+  `amnioticoMeconio` BIT NOT NULL,
+  `miembrosSupNormales` BIT NOT NULL,
+  `anotaciones` TEXT NOT NULL,
+  `edema` BIT NOT NULL,
+  `idHistoriaClinica` INT NOT NULL,
+  PRIMARY KEY (`idotros_O`));
+ALTER TABLE otros_o
+ADD FOREIGN KEY (idHistoriaClinica) REFERENCES historiaclinica(idHistoriaClinica);
