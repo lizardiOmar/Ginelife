@@ -129,3 +129,15 @@ CREATE TABLE `ginelife`.`vaginal_o` (
   PRIMARY KEY (`idvaginal_o`));
 ALTER TABLE vaginal_o
 ADD FOREIGN KEY (idHistoriaClinica) REFERENCES historiaclinica(idHistoriaClinica);
+CREATE TABLE `ginelife`.`alturapresentacion` (
+  `idalturaPresentacion` INT NOT NULL AUTO_INCREMENT,
+  `I` VARCHAR(45) NOT NULL,
+  `II` VARCHAR(45) NOT NULL,
+  `III` VARCHAR(45) NOT NULL,
+  `aminosIntegro` BIT NOT NULL,
+  `roto` BIT NOT NULL,
+  `DD` VARCHAR(5) NOT NULL,
+  `MM` VARCHAR(5) NOT NULL,
+  `YYYY` VARCHAR(5) NOT NULL,
+  `idHistoriaClinica` INT NOT NULL,
+  PRIMARY KEY (`idalturaPresentacion`));
