@@ -26,3 +26,5 @@ CREATE TABLE `ginelife`.`alergias` (
   `alergiaN` VARCHAR(45) NOT NULL,
   `idHistoriaClinica` INT NOT NULL,
   PRIMARY KEY (`idalergias`));
+ALTER TABLE alergias
+ADD FOREIGN KEY (idHistoriaClinica) REFERENCES HistoriaClinica(idHistoriaClinica);
