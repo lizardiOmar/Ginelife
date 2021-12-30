@@ -13,6 +13,10 @@
 				$adicciones=new Adicciones($_GET['idAdicciones'], $_GET['Tabaquismo'], $_GET['Alcoholismo'], $_GET['Drogas'], $_GET['idHistoriaClinica']);
 				$adicciones->setAdicciones();
 			}
+			if (isset($_GET['idHistoriaClinica'])) {
+				
+				Adicciones::getAdiccionesByHC($_GET['idHistoriaClinica']);
+			}
 	}
 
 ?>

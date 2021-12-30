@@ -31,7 +31,25 @@
 				return $e;
 			}
 		}
-		
+		public static function getQuirurgicosByHC($idHistoriaClinica){
+			$response = null;
+			$sql = "SELECT * FROM antecedentespersonalesquirurgicos where idHistoriaClinica=$idHistoriaClinica;";
+			try {
+				$conn=new conexion();
+				$stmt = $conn->getConexion()->query($sql);
+				$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+				while ($row = $stmt->fetch()) {
+					$response[] = $row;
+				}
+				echo json_encode($response);
+			} catch (PDOException $e) {
+				$response = array(
+					"estado"=>"FALLIDO",
+					"direccion"=>"NULL"
+				);
+				echo json_encode($response);
+			}
+		}
 	}
 
 

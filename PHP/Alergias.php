@@ -1,19 +1,17 @@
 <?php
 	include("Conexion.php");
-	class PadecimientoActual{
-		var $idPadecimentoActual;
-		var $Nombre;
-		var $Descripcion;
+	class Alergias{
+		var $idAlergia;
+		var $nombre;
 		var $idHistoriaClinica;
-		public function __construct($idPadecimentoActual, $Nombre, $Descripcion, $idHistoriaClinica){
-			$this->idPadecimentoActual = $idPadecimentoActual;
-			$this->Nombre = $Nombre;
-			$this->Descripcion = $Descripcion;
+		public function __construct($idAlergia, $nombre, $idHistoriaClinica){
+			$this->idAlergia = $idAlergia;
+			$this->nombre = $nombre;
 			$this->idHistoriaClinica = $idHistoriaClinica;
 		}
-		public function setPadecimiento(){
+		public function setAlergia(){
 			$conn=new Conexion();
-			$query="INSERT INTO padecimientoactual (`idpadecimientoActual`, `nombre`, `descripcion`, `idHistoriaClinica`) VALUES ($this->idPadecimentoActual, '$this->Nombre', '$this->Descripcion', '$this->idHistoriaClinica');";
+			$query="INSERT INTO alergias (`idalergias`, `alergiaN`, `idHistoriaClinica`) VALUES ($this->idAlergia, '$this->nombre', $this->idHistoriaClinica);";
 			try{
 				$conn->getConexion()->exec($query);
 				$conn=null;
@@ -29,9 +27,9 @@
 				return $e;
 			}
 		}
-		public static function getPadecimientosByHC($idHistoriaClinica){
+		public static function getAlergiasByHC($idHistoriaClinica){
 			$response = null;
-			$sql = "SELECT * FROM padecimientoactual where idHistoriaClinica=$idHistoriaClinica;";
+			$sql = "SELECT * FROM alergias where idHistoriaClinica=$idHistoriaClinica;";
 			try {
 				$conn=new conexion();
 				$stmt = $conn->getConexion()->query($sql);
@@ -49,5 +47,6 @@
 			}
 		}
 	}
+
 
 ?>

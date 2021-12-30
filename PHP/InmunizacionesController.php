@@ -15,6 +15,9 @@
 				$inmunizaciones= new Inmunizaciones($_GET['idInmunizaciones'], $_GET['Rubeola'], $_GET['Influenza'], $_GET['Antitetanica'], $_GET['Covid19'], $_GET['idHistoriaClinica']);
 				$inmunizaciones->setInmunizaciones();
 			}
-		break;
+			if (isset($_GET['idHistoriaClinica'])) {
+				
+				Inmunizaciones::getInmunizacionesByHC($_GET['idHistoriaClinica']);
+			}
 	}
 ?>

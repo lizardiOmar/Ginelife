@@ -52,6 +52,30 @@
 				return $e;
 			}
 		}
+		public static function getAntecedentesGOByHC($idHistoriaClinica){
+			$response = null;
+			$conn=new Conexion();
+			$sql = "SELECT * FROM antecedentesginecologicosobstetricos where idHistoriaClinica=$idHistoriaClinica";
+			try {
+				
+				$stmt = $conn->getConexion()->query($sql);
+				$result = $stmt->setFetchMode(PDO::FETCH_NUM);
+				while ($row = $stmt->fetch()) {
+					$antecedentesGO =  new AntecedentesGO($row[0], $row[1], $row[2], $row[3],  $row[4], $row[5], $row[6], $row[7], $row[8], $row[9], $row[10], $row[11], $row[12], $row[13], $row[14] );
+				}
+				$conn=null;
+				echo json_encode($antecedentesGO);
+				return json_encode($antecedentesGO);
+			} catch (PDOException $e) {
+				$response = null;
+				$response = array(
+					"estado"=>"FALLIDO",
+					"cliente"=>"NULL"
+				);
+				
+				return json_encode($response);
+			}
+		}
 	}
 
 ?>

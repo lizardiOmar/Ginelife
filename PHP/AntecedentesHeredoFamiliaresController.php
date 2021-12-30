@@ -16,6 +16,10 @@
 				$antecedentesHF=new AntecedentesHeredoFamiliares($_GET['idAntecedentesHeredoFamiliares'], $_GET['Diabetes'], $_GET['Cardiopatias'], $_GET['HTA'], $_GET['Tiroides'], $_GET['Neoplasticos'], $_GET['Especificaciones'], $_GET['idHistoriaClinica']);
 				$antecedentesHF->setAntecedentesHF();
 			}
+			if (isset($_GET['idHistoriaClinica'])) {
+				
+				AntecedentesHeredoFamiliares::getAntecedentesByHC($_GET['idHistoriaClinica']);
+			}
 	}
 
 ?>

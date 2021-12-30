@@ -13,6 +13,10 @@
 				$pa=new PadecimientoActual($_GET['idPadecimientoActual'],$_GET['nombre'],$_GET['Descripcion'],$_GET['idHistoriaClinica']);
 				$pa->setPadecimiento();
             }
+			if (isset($_GET['idHistoriaClinica'])) {
+				
+				PadecimientoActual::getPadecimientosByHC($_GET['idHistoriaClinica']);
+			}
 }
 
 ?>

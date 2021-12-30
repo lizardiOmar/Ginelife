@@ -27,6 +27,10 @@ switch ($_SERVER['REQUEST_METHOD']) {
 				);
 				$antecedentesGO->setAntecedentesGO();
             }
+			if (isset($_GET['idHistoriaClinica'])) {
+				
+				AntecedentesGO::getAntecedentesGOByHC($_GET['idHistoriaClinica']);
+			}
 }
 
 ?>

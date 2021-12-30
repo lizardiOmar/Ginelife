@@ -33,5 +33,29 @@
 				return $e;
 			}
 		}
+		public static function getInmunizacionesByHC($idHistoriaClinica){
+			$response = null;
+			$conn=new Conexion();
+			$sql = "SELECT * FROM inmunizaciones where idHistoriaClinica=$idHistoriaClinica";
+			try {
+				
+				$stmt = $conn->getConexion()->query($sql);
+				$result = $stmt->setFetchMode(PDO::FETCH_NUM);
+				while ($row = $stmt->fetch()) {
+					$inmunizaciones =  new Inmunizaciones($row[0], $row[1], $row[2], $row[3],  $row[4], $row[5]);
+				}
+				$conn=null;
+				echo json_encode($inmunizaciones);
+				return json_encode($inmunizaciones);
+			} catch (PDOException $e) {
+				$response = null;
+				$response = array(
+					"estado"=>"FALLIDO",
+					"cliente"=>"NULL"
+				);
+				
+				return json_encode($response);
+			}
+		}
 	}
 ?>

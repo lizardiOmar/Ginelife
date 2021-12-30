@@ -16,6 +16,10 @@
 				$_GET['Calle'], $_GET['Numero'], $_GET['CP'], $_GET['idPaciente']);
 				$domicilio->setDomicilioPaciente();
 			}
+			if (isset($_GET['idPaciente'])) {
+				
+				DomicilioPaciente::getDomicilioById($_GET['idPaciente']);
+			}
 	}
 
 ?>

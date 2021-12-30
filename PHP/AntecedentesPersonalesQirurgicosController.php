@@ -13,6 +13,10 @@
 				$antecedentesPQ=new AntecedentesPersonalesQirurgicos($_GET['idAntecedentesPersonalesQuirurgicos'], $_GET['Nombre'], $_GET['Descripcion'], $_GET['YYYY'], $_GET['idHistoriaClinica']);
 				$antecedentesPQ->setAntecedentesPQ();
 			}
+			if (isset($_GET['idHistoriaClinica'])) {
+				
+				AntecedentesPersonalesQirurgicos::getQuirurgicosByHC($_GET['idHistoriaClinica']);
+			}
 	}
 
 ?>

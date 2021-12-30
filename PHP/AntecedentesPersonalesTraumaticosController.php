@@ -13,6 +13,10 @@
 				$antecedentesPT=new AntecedentesPersonalesTraumaticos($_GET['idAntecedentesPersonalesTraumaticos'], $_GET['Nombre'], $_GET['Descripcion'], $_GET['YYYY'], $_GET['idHistoriaClinica']);
 				$antecedentesPT->setAntecedentesPT();
 			}
+			if (isset($_GET['idHistoriaClinica'])) {
+				
+				AntecedentesPersonalesTraumaticos::getTraumaticosByHC($_GET['idHistoriaClinica']);
+			}
 	}
 
 ?>

@@ -15,6 +15,9 @@
 				$antecedentesPP=new AntecedentesPersonalesPatologicos($_GET['idAntecedentesPersonalesPatologicos'], $_GET['Diabetes'], $_GET['Cardiopatias'], $_GET['HTA'], $_GET['Epilepsia'], $_GET['Neoplasticos'], $_GET['idHistoriaClinica']);
 				$antecedentesPP->setAntecedentesPerPat();
 			}
+			if (isset($_GET['idHistoriaClinica'])) {
+				AntecedentesPersonalesPatologicos::getAntecedentesPPByHC($_GET['idHistoriaClinica']);
+			}
 	}
 
 ?>

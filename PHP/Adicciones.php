@@ -15,7 +15,7 @@
 		}
 		public function setAdicciones(){
 			$conn=new Conexion();
-			$query="INSERT INTO adicciones (idAdicciones, Tabaquismo, Alcoholismo, Drogas, idHistoriaClinica) VALUES ($this->idAdicciones, '$this->Tabaquismo', '$this->Alcoholismo', '$this->Drogas', $this->idHistoriaClinica)";
+			$query="INSERT INTO adicciones (idAdicciones, Tabaquismo, Alcoholismo, Drogas, idHistoriaClinica) VALUES ($this->idAdicciones, $this->Tabaquismo, $this->Alcoholismo, $this->Drogas, $this->idHistoriaClinica)";
 			try{
 				$conn->getConexion()->exec($query);
 				$conn=null;
@@ -29,6 +29,30 @@
 				);
 				echo $e;
 				return $e;
+			}
+		}
+		public static function getAdiccionesByHC($idHistoriaClinica){
+			$response = null;
+			$conn=new Conexion();
+			$sql = "SELECT * FROM adicciones where idHistoriaClinica=$idHistoriaClinica";
+			try {
+				
+				$stmt = $conn->getConexion()->query($sql);
+				$result = $stmt->setFetchMode(PDO::FETCH_NUM);
+				while ($row = $stmt->fetch()) {
+					$adicciones =  new Adicciones($row[0], $row[1], $row[2], $row[3],  $row[4]);
+				}
+				$conn=null;
+				echo json_encode($adicciones);
+				return json_encode($adicciones);
+			} catch (PDOException $e) {
+				$response = null;
+				$response = array(
+					"estado"=>"FALLIDO",
+					"cliente"=>"NULL"
+				);
+				
+				return json_encode($response);
 			}
 		}
 	}

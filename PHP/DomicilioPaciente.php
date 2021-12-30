@@ -33,5 +33,29 @@
 				return $e;
 			}
 		}
+		public static function getDomicilioById($idPaciente){
+			$response = null;
+			$conn=new Conexion();
+			$sql = "SELECT * FROM domicilioPaciente where idPaciente=$idPaciente";
+			try {
+				
+				$stmt = $conn->getConexion()->query($sql);
+				$result = $stmt->setFetchMode(PDO::FETCH_NUM);
+				while ($row = $stmt->fetch()) {
+					$domicilio =  new DomicilioPaciente($row[0], $row[1], $row[2], $row[3],  $row[4], $row[5], $row[6]);
+				}
+				$conn=null;
+				echo json_encode($domicilio);
+				return json_encode($domicilio);
+			} catch (PDOException $e) {
+				$response = null;
+				$response = array(
+					"estado"=>"FALLIDO",
+					"cliente"=>"NULL"
+				);
+				
+				return json_encode($response);
+			}
+		}
 	}
 ?>
