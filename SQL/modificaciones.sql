@@ -167,3 +167,5 @@ CREATE TABLE `notamedica` (
   `idPaciente` int(11) NOT NULL,
   PRIMARY KEY (`idnotaMedica`)
 );
+ALTER TABLE notamedica
+ADD FOREIGN KEY (idPaciente) REFERENCES pacientes(idPacientes);
