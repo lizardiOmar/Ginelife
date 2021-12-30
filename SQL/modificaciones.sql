@@ -153,3 +153,17 @@ CREATE TABLE `ginelife`.`otros_o` (
   PRIMARY KEY (`idotros_O`));
 ALTER TABLE otros_o
 ADD FOREIGN KEY (idHistoriaClinica) REFERENCES historiaclinica(idHistoriaClinica);
+CREATE TABLE `notamedica` (
+  `idnotaMedica` int(11) NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(45) NOT NULL,
+  `TA` varchar(10) NOT NULL,
+  `FC` varchar(10) NOT NULL,
+  `FR` varchar(10) NOT NULL,
+  `T` varchar(10) NOT NULL,
+  `descripcion` text NOT NULL,
+  `DD` varchar(5) NOT NULL,
+  `MM` varchar(5) NOT NULL,
+  `YYYY` varchar(5) NOT NULL,
+  `idPaciente` int(11) NOT NULL,
+  PRIMARY KEY (`idnotaMedica`)
+);
