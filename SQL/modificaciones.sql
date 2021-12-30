@@ -141,3 +141,5 @@ CREATE TABLE `ginelife`.`alturapresentacion` (
   `YYYY` VARCHAR(5) NOT NULL,
   `idHistoriaClinica` INT NOT NULL,
   PRIMARY KEY (`idalturaPresentacion`));
+ALTER TABLE alturapresentacion
+ADD FOREIGN KEY (idHistoriaClinica) REFERENCES historiaclinica(idHistoriaClinica);
