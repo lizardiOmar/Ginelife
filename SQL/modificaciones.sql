@@ -21,4 +21,8 @@ ALTER TABLE `ginelife`.`padecimientoactual`
 CHANGE COLUMN `idHojaClinica` `idHistoriaClinica` INT(11) NOT NULL ;
 ALTER TABLE padecimientoactual
 ADD FOREIGN KEY (idHistoriaClinica) REFERENCES HistoriaClinica(idHistoriaClinica);
-
+CREATE TABLE `ginelife`.`alergias` (
+  `idalergias` INT NOT NULL AUTO_INCREMENT,
+  `alergiaN` VARCHAR(45) NOT NULL,
+  `idHistoriaClinica` INT NOT NULL,
+  PRIMARY KEY (`idalergias`));
