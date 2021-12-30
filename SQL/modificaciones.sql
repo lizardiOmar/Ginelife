@@ -28,3 +28,24 @@ CREATE TABLE `ginelife`.`alergias` (
   PRIMARY KEY (`idalergias`));
 ALTER TABLE alergias
 ADD FOREIGN KEY (idHistoriaClinica) REFERENCES HistoriaClinica(idHistoriaClinica);
+CREATE TABLE `ginelife`.`exploraciong` (
+  `idexploracionG` INT NOT NULL AUTO_INCREMENT,
+  `consciente` BIT NOT NULL,
+  `habitus` VARCHAR(45) NOT NULL,
+  `peso` VARCHAR(15) NOT NULL,
+  `estatura` VARCHAR(15) NOT NULL,
+  `TA` VARCHAR(45) NOT NULL,
+  `FC` VARCHAR(45) NOT NULL,
+  `FR` VARCHAR(45) NOT NULL,
+  `temperatura` VARCHAR(45) NOT NULL,
+  `pulmonesB` BIT NOT NULL,
+  `pulmonesT` VARCHAR(45) NOT NULL,
+  `corazonB` BIT NOT NULL,
+  `corazonT` VARCHAR(45) NOT NULL,
+  `cabezaB` BIT NOT NULL,
+  `cabezaT` VARCHAR(45) NOT NULL,
+  `cuelloB` BIT NOT NULL,
+  `cuelloT` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idexploracionG`));
+  ALTER TABLE `ginelife`.`exploraciong` 
+ADD COLUMN `idHistoriaClinica` INT NOT NULL AFTER `cuelloT`;
