@@ -16,24 +16,7 @@ axios.get('http://localhost/PHP/HistoriaClinicaController.php?idPaciente='+idPac
         document.title="Antecedentes heredo familiares de "+paciente.Nombres;
         var titulo=document.getElementById('tituloH1');
         titulo.innerHTML='Antecedentes heredo familiares de '+paciente.Nombres+' '+paciente.Apellidos;
-        document.getElementById('Terminado').addEventListener('click', Terminado);
-        function Terminado(e) {
-            axios.get('http://localhost/PHP/DoctoraController.php?idDoctora='+paciente.idDoctora)
-            .then(function (response) {
-                console.log(response);
-                var doctora=JSON.parse(JSON.stringify(response.data));
-                //alert("Cargando información Dra. "+doctora.Nombres);
-                alert("Registro terminado, Dra. "+doctora.Nombres+".");
-                window.location.href = "C:/Users/heand/Desktop/GINELIFE/HTML/Main.html?correo="+doctora.Email;
-            })
-        }
-        document.getElementById('Continuar').addEventListener('click', registrarAntecedentes);
-        document.getElementById('Omitir').addEventListener('click', omitir);
-        function omitir(e){
-            window.location.href = "C:/Users/heand/Desktop/GINELIFE/HTML/AntecedentesPersonalesPatologicos.html?idHistoriaClinica="+HistoriaClinica.idHistoriaClinica;
-        }
-       
-        
+        document.getElementById('Continuar').addEventListener('click', registrarAntecedentes);    
         function registrarAntecedentes(e){
             var inputDiabetes=document.getElementById('diabetes').checked;
             var inputCardio=document.getElementById('cardiopatias').checked;

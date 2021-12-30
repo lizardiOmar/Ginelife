@@ -11,20 +11,9 @@ axios.get('http://localhost/PHP/HistoriaClinicaController.php?idHistoriaClinica=
     .then(function (response) {
         console.log("RESP: "+response.data);
         paciente=JSON.parse(JSON.stringify(response.data));
-        document.title="Agregar antecedente traumático de "+paciente.Nombres+' '+paciente.Apellidos;
+        document.title="Agregar antecedente quirúrgico de "+paciente.Nombres+' '+paciente.Apellidos;
         var titulo=document.getElementById('tituloH1');
-        titulo.innerHTML='Agregar antecedente traumático de '+paciente.Nombres+' '+paciente.Apellidos;
-        //Funcion para terminar el registro de la historia clinica
-        document.getElementById('Terminado').addEventListener('click', Terminado);
-        function Terminado(e) {
-            axios.get('http://localhost/PHP/DoctoraController.php?idDoctora='+paciente.idDoctora)
-            .then(function (response) {
-                console.log(response);
-                var doctora=JSON.parse(JSON.stringify(response.data));
-                alert("Registro terminado, Dra. "+doctora.Nombres+".");
-                window.location.href = "C:/Users/heand/Desktop/GINELIFE/HTML/Main.html?correo="+doctora.Email;
-            })
-        }
+        titulo.innerHTML='Agregar antecedente quirúrgico de '+paciente.Nombres+' '+paciente.Apellidos;
         //Funcion para omitir el registro de antecedentes Qirurgicos
         document.getElementById('Omitir').addEventListener('click', omitir);
         function omitir(e){

@@ -1,0 +1,68 @@
+body{
+    background-color:rgb(255, 194, 255);
+    background-image: url("../IMG/Logo.png");
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+    text-align: center;
+    letter-spacing: 5px;
+}
+#tituloH1{
+    font-size: 25px;
+    display: inline-block;
+    margin: 0; 
+    padding: 0;
+}
+h2{
+    border: 1px solid;
+    border-radius: 15px;
+    font-size: 25px;
+    margin: 0; 
+    padding: 0;
+    background-color:pink;
+}
+h3{
+    margin: 0; 
+    padding: 0;
+    letter-spacing: 1px;
+    display: inline-block;
+    font-weight: bold;
+}
+hr{
+    border: .5px solid rgb(255, 194, 255);
+}
+p{
+    color: black;
+    font-size: 15px;
+    display: inline-block;
+    margin: 0; 
+    padding-top: 5px;
+}
+#nombreP, #nombreD{
+    color: black;
+    font-size: 15px;
+    display: block;
+    margin: 0; 
+    padding-top: 5px;
+}
+.antGO{
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+#fecha_hora{
+    font-weight: bold;
+}
+#nombreP{
+    text-decoration: underline;
+}
+#nombreD{
+    font-weight: bold;
+}
+div{
+    border-radius: 15px;
+}
+@font-face {
+    font-family: 'Anton';
+    src: url('../fonts/Anton-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}

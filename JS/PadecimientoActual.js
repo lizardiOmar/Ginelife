@@ -1,12 +1,6 @@
 let params = new URLSearchParams(location.search);
 var idHistoriaClinica = params.get('idHistoriaClinica');
-//Omitir adicciones
-document.getElementById('Omitir').addEventListener('click', omitir);
-function omitir(e){
-    window.location.href = "C:/Users/heand/Desktop/GINELIFE/HTML/ElegirExploracionFisica.html?idHistoriaClinica="+idHistoriaClinica;
-}
 //Terminar historia clinica
-document.getElementById('Terminado').addEventListener('click', Terminado);
 function Terminado(e){
     axios.get('http://localhost/PHP/HistoriaClinicaController.php?idHistoriaClinica='+idHistoriaClinica)
     .then(function (response) {

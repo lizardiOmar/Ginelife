@@ -5,16 +5,102 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name='NUEVA PACIENTE' content='width=device-width, initial-scale=1'>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <link rel='stylesheet' type='text/css' media='screen' href='../CSS/AntecedentesPersonalesTraumaticos.css'>
+        <link rel='stylesheet' type='text/css' media='screen' href='../CSS/HCP.css'>
+        <link rel="stylesheet" type="text/css" media="print" href='../CSS/HCP.css'/>
     </head>
     <body>
-        <h1 id="tituloH1">Elegir tipo de exploración:</h1>
         <div>
-            <button type="button" id="Ginecologica" class="Ginecologica">Ginecológica</button>
-            <button type="button" id="Obstetrica" class="Obstetrica">Obstétrica</button>
-            <button type="button" id="Omitir" class="Omitir">Omitir</button>
-            <button type="button" id="Terminado" class="Terminado">Terminado</button>
+            <h1 id="tituloH1">GINELIFE: Historia Clínica</h1>
         </div>
-        <script src="../JS/elegirEF.js"></script>
+        <!---->
+        <div id="HC_data">
+            <p id="fecha_hora"></p><br>
+            <p id="nombreP"></p>
+            <p id="nombreD"></p>
+        </div>
+        <!---->
+        <div id="domicilio">
+            <h2>Datos de domicilio</h2>
+            <p id="domicilio_info"></p>
+        </div>
+        <!---->
+        <div id="datos_generales">
+            <h2>Datos generales</h2>
+            <p id="edad_edoCivil_ocupacion"></p>
+        </div>
+        <!---->
+        <div id="heredo_familiar">
+            <h2 id="" class="">Antecedentes heredo familiares</h2>
+            <p id="diabetes"></p>
+            <p id="cardio"></p>
+            <p id="hta"></p>
+            <p id="tiroides"></p>
+            <p id="neoplasticos"></p>
+            <br>
+            <p id="especificaciones"></p>
+        </div>
+        <!---->
+        <div id="patologicos">
+            <h2 id="" class="">Antecedentes personales patológicos</h2>
+            <p id="diabetesP"></p>
+            <p id="cardioP"></p>
+            <p id="htaP"></p>
+            <p id="epilepsia"></p>
+            <p id="nefropatias"></p>
+            <div id="alergias_ul">
+                <h3>Alergias:</h3>
+            </div>
+            <div id="traumaticos_ul">
+                <h3>Antecedentes personales traumáticos:</h3>
+            </div>
+            <div id="quirurgicos_ul">
+                <h3>Antecedentes personales quirúrgicos: </h3>
+            </div>
+        </div>
+        <!---->
+        <div id="no_patologicos">
+            <h2 id="" class="">Antecedentes personales no patológicos</h2>
+            <h3>Adicciones</h3>
+            <p id="tabaquismo"></p>
+            <p id="alcoholismo"></p>
+            <p id="drogas"></p>
+            <br>
+            <h3>Inmunizaciones</h3>
+            <p id="rubeola"></p>
+            <p id="influenza"></p>
+            <p id="antitetanica"></p>
+            <p id="covid19"></p>
+        </div>
+        <!---->
+        <div id="gin_obst">
+            <h2 id="" class="">Antecedentes ginecológicos y obstétricos</h2>
+            <p class="antGO">Menarca: </p>
+            <p id="menarca"></p>
+            <p class="antGO">Ritmo: </p>
+            <p id="ritmo"></p>
+            <p class="antGO">I.V.S.: </p>
+            <p id="ivs"></p>
+            <p class="antGO">N° de compañeros sexuales:</p>
+            <p id="noParejas"></p>
+            <br>
+            <p class="antGO">G.:</p>
+            <p id="G"></p>
+            <p class="antGO">P.:</p>
+            <p id="P"></p>
+            <p class="antGO">A.:</p>
+            <p id="A"></p>
+            <p class="antGO">C.:</p>
+            <p id="C"></p>
+            <p class="antGO">Ectópico:</p>
+            <p id="ectopico"></p>
+            <p class="antGO">Molar:</p>
+            <p id="molar"></p>
+            <br>
+        </div>
+        <div id="padecimientos_ul">
+            <h3>Padecimientos actuales: </h3>
+        </div>
+        
+        <script src="../JS/HCP.js"></script>
     </body>
 </html>

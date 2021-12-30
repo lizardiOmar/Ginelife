@@ -15,20 +15,6 @@ axios.get('http://localhost/PHP/HistoriaClinicaController.php?idHistoriaClinica=
             document.title="Antecedentes personales patológicos de "+paciente.Nombres;
             var titulo=document.getElementById('tituloH1');
             titulo.innerHTML='Antecedentes personales patológicos de '+paciente.Nombres+' '+paciente.Apellidos;
-            document.getElementById('Terminado').addEventListener('click', Terminado);
-            function Terminado(e) {
-                axios.get('http://localhost/PHP/DoctoraController.php?idDoctora='+paciente.idDoctora)
-                .then(function (response) {
-                    console.log(response);
-                    var doctora=JSON.parse(JSON.stringify(response.data));
-                    alert("Registro terminado, Dra. "+doctora.Nombres+".");
-                    window.location.href = "C:/Users/heand/Desktop/GINELIFE/HTML/Main.html?correo="+doctora.Email;
-                })
-            }
-            document.getElementById('Omitir').addEventListener('click', omitir);
-            function omitir(e){
-                window.location.href = "C:/Users/heand/Desktop/GINELIFE/HTML/AntecedentesPersonalesTraumaticos.html?idHistoriaClinica="+historiaClinica.idHistoriaClinica;
-            }
             document.getElementById('Continuar').addEventListener('click', registrarAntecedentes);
             function registrarAntecedentes(e){
                 var inputDiabetes=document.getElementById('diabetes').checked;
@@ -69,7 +55,7 @@ axios.get('http://localhost/PHP/HistoriaClinicaController.php?idHistoriaClinica=
                 axios.get('http://localhost/PHP/AntecedentesPersonalesPatologicosController.php?idAntecedentesPersonalesPatologicos=0&Diabetes='+diabetes+'&Cardiopatias='+cardio+'&HTA='+HTA+'&Epilepsia='+epilepsia+'&Neoplasticos='+neoplasticos+'&idHistoriaClinica='+idHistoriaClinica)
                 .then(function (response) {
                     console.log(response);
-                    window.location.href = "C:/Users/heand/Desktop/GINELIFE/HTML/AntecedentesPersonalesTraumaticos.html?idHistoriaClinica="+historiaClinica.idHistoriaClinica;
+                    window.location.href = "C:/Users/heand/Desktop/GINELIFE/HTML/Alergias.html?idHistoriaClinica="+historiaClinica.idHistoriaClinica;
                 })
                 .catch(function (error) {
                     console.log(error);
