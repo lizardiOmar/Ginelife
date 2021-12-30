@@ -115,3 +115,17 @@ ALTER TABLE utero_o
 ADD FOREIGN KEY (idHistoriaClinica) REFERENCES historiaclinica(idHistoriaClinica);
 ALTER TABLE `ginelife`.`utero_o` 
 CHANGE COLUMN `idHistoriaClinica` `idHistoriaClinica` INT(11) NOT NULL ;
+CREATE TABLE `ginelife`.`vaginal_o` (
+  `idvaginal_o` INT NOT NULL AUTO_INCREMENT,
+  `tacto` BIT NOT NULL,
+  `dilatacion` VARCHAR(45) NOT NULL,
+  `borramiento` VARCHAR(45) NOT NULL,
+  `anterior` BIT NOT NULL,
+  `central` BIT NOT NULL,
+  `posterior` BIT NOT NULL,
+  `constDura` BIT NOT NULL,
+  `blanda` BIT NOT NULL,
+  `idHistoriaClinica` INT NOT NULL,
+  PRIMARY KEY (`idvaginal_o`));
+ALTER TABLE vaginal_o
+ADD FOREIGN KEY (idHistoriaClinica) REFERENCES historiaclinica(idHistoriaClinica);
