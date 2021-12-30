@@ -68,3 +68,11 @@ CREATE TABLE `ginelife`.`estudios_lab` (
   PRIMARY KEY (`idestudios_lab`));
 ALTER TABLE estudios_lab
 ADD FOREIGN KEY (idHistoriaClinica) REFERENCES historiaclinica(idHistoriaClinica);
+CREATE TABLE `ginelife`.`plan` (
+  `idplan` INT NOT NULL AUTO_INCREMENT,
+  `planManejo` TEXT NOT NULL,
+  `pronostico` TEXT NOT NULL,
+  `idHistoriaClinica` INT NOT NULL,
+  PRIMARY KEY (`idplan`));
+ALTER TABLE plan
+ADD FOREIGN KEY (idHistoriaClinica) REFERENCES historiaclinica(idHistoriaClinica);
