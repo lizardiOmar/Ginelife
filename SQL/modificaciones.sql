@@ -51,3 +51,20 @@ CREATE TABLE `ginelife`.`exploraciong` (
 ADD COLUMN `idHistoriaClinica` INT NOT NULL AFTER `cuelloT`;
 ALTER TABLE exploraciong
 ADD FOREIGN KEY (idHistoriaClinica) REFERENCES historiaclinica(idHistoriaClinica);
+CREATE TABLE `ginelife`.`estudios_lab` (
+  `idestudios_lab` INT NOT NULL AUTO_INCREMENT,
+  `grupoSanguineo` VARCHAR(45) NOT NULL,
+  `RH` VARCHAR(45) NOT NULL,
+  `hemoglobina` VARCHAR(45) NOT NULL,
+  `Hematocrito` VARCHAR(45) NOT NULL,
+  `Leucocitos` VARCHAR(45) NOT NULL,
+  `Plaquetas` VARCHAR(45) NOT NULL,
+  `TP` VARCHAR(45) NOT NULL,
+  `TPT` VARCHAR(45) NOT NULL,
+  `Glucosa` VARCHAR(45) NOT NULL,
+  `VDRL` VARCHAR(45) NOT NULL,
+  `HIV` VARCHAR(45) NOT NULL,
+  `idHistoriaClinica` INT NOT NULL,
+  PRIMARY KEY (`idestudios_lab`));
+ALTER TABLE estudios_lab
+ADD FOREIGN KEY (idHistoriaClinica) REFERENCES historiaclinica(idHistoriaClinica);
