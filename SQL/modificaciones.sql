@@ -101,3 +101,15 @@ CREATE TABLE `ginelife`.`abdomen_o` (
   PRIMARY KEY (`idabdomen_o`));
   ALTER TABLE abdomen_o
 ADD FOREIGN KEY (idHistoriaClinica) REFERENCES historiaclinica(idHistoriaClinica);
+CREATE TABLE `ginelife`.`utero_o` (
+  `idutero_o` INT NOT NULL AUTO_INCREMENT,
+  `actividad` BIT NOT NULL,
+  `contraccionEsesporadicas` BIT NOT NULL,
+  `contraccionesIrregulares` BIT NOT NULL,
+  `frecuenciaContracciones` VARCHAR(45) NOT NULL,
+  `intensidad` VARCHAR(45) NOT NULL,
+  `hipertonia` BIT NOT NULL,
+  `idHistoriaClinica` INT NULL,
+  PRIMARY KEY (`idutero_o`));
+ALTER TABLE utero_o
+ADD FOREIGN KEY (idHistoriaClinica) REFERENCES historiaclinica(idHistoriaClinica);
