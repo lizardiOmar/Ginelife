@@ -113,3 +113,5 @@ CREATE TABLE `ginelife`.`utero_o` (
   PRIMARY KEY (`idutero_o`));
 ALTER TABLE utero_o
 ADD FOREIGN KEY (idHistoriaClinica) REFERENCES historiaclinica(idHistoriaClinica);
+ALTER TABLE `ginelife`.`utero_o` 
+CHANGE COLUMN `idHistoriaClinica` `idHistoriaClinica` INT(11) NOT NULL ;
