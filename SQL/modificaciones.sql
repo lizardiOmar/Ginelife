@@ -49,3 +49,5 @@ CREATE TABLE `ginelife`.`exploraciong` (
   PRIMARY KEY (`idexploracionG`));
   ALTER TABLE `ginelife`.`exploraciong` 
 ADD COLUMN `idHistoriaClinica` INT NOT NULL AFTER `cuelloT`;
+ALTER TABLE exploraciong
+ADD FOREIGN KEY (idHistoriaClinica) REFERENCES historiaclinica(idHistoriaClinica);
