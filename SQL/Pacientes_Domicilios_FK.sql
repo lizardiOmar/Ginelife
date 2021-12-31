@@ -11,5 +11,3 @@ CREATE TABLE `ginelife`.`domiciliopaciente` (
   PRIMARY KEY (`idDomicilioPaciente`));
 ALTER TABLE domicilioPaciente
 ADD FOREIGN KEY (idPaciente) REFERENCES pacientes(idPacientes);
-ALTER TABLE `ginelife`.`domiciliopaciente` 
-CHANGE COLUMN `idDomicilioPaciente` `idDomicilioPaciente` INT(11) NOT NULL AUTO_INCREMENT ;

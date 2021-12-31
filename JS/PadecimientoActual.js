@@ -41,7 +41,7 @@ function registrarAntecedentesGO (e){
                 console.log(response.data);
                 console.log('http://localhost/PHP/PadecimientoActualController.php?idPadecimientoActual=0&nombre='+nombre+'&Descripcion='+descripcion+'&idHistoriaClinica='+idHistoriaClinica);
                 //alert("Todo listo.");
-                window.location.href = "C:/Users/heand/Desktop/GINELIFE/HTML/ElegirExploracionFisica.html?idHistoriaClinica="+idHistoriaClinica;
+                window.location.href = "C:/Users/heand/Desktop/GINELIFE/HTML/Exploracion.html?idHistoriaClinica="+idHistoriaClinica;
             })
             .catch(function (error) {
                 console.log(error);

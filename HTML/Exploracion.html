@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploración</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='../CSS/exploracion.css'>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <h1 id="tituloH1">Exploración</h1>
+    <form>
+        <br>
+            <label for="consciente">Consciente:</label>
+            <select name="consciente" id="consciente">
+                <option value="1">Si</option>
+                <option value="0">No</option>
+            </select>
+            <label for="habitus"> Habitus:</label>
+            <input type="text" name="habitus" id="habitus" placeholder="Habitus" required>
+                
+            <label for="peso">Peso:</label>
+            <input type="number" name="peso" id="peso" placeholder="Peso" required>
+            <label for="peso">Kg.</label>
+            <label for="estatura"> Estatura:</label>
+            <input type="number" name="estatura" id="estatura" placeholder="Estatura" required>
+            <label for="estatura"> cm</label>
+
+            <br>    
+
+            <label for="ta">T.A.:</label>
+            <input type="text" name="ta" id="ta" placeholder="T.A." required>
+            <label for="ta">mm Hg.</label>
+
+            <label for="fc">F.C.:</label>
+            <input type="text" name="fc" id="fc" placeholder="F.C." required>
+            <label for="fc">por min.</label>
+
+            <label for="fr">F.R.:</label>
+            <input type="text" name="fr" id="fr" placeholder="F.R." required>
+            <label for="fr">por min.</label>
+
+            <label for="temperatura">Temperatura:</label>
+            <input type="text" name="temperatura" id="temperatura" placeholder="Temperatura." required>
+            <label for="temperatura">°C</label>
+            
+            <br>
+            <p id="pulmonesP">Pulmones:</p>
+            <select name="pulmonB" id="pulmonB">
+                <option value="1">Normal</option>
+                <option value="0">Anormal</option>
+            </select>
+            <input type="text" name="pulmonT" id="pulmonT" required>
+            <br>
+            <p id="corazonP">Corazón:</p>
+            <select name="corazonB" id="corazonB">
+                <option value="1">Normal</option>
+                <option value="0">Anormal</option>
+            </select>
+            <input type="text" name="corazonT" id="corazonT" required>
+            <br>
+            <p id="cabezaP">Cabeza:</p>
+            <select name="cabezaB" id="cabezaB">
+                <option value="1">Normal</option>
+                <option value="0">Anormal</option>
+            </select>
+            <input type="text" name="cabezaT" id="cabezaT" required>
+            <br>
+            <p id="cuelloP">Cuello:</p>
+            <select name="cuelloB" id="cuelloB">
+                <option value="1">Normal</option>
+                <option value="0">Anormal</option>
+            </select>
+            <input type="text" name="cuelloT" id="cuelloT" required>
+
+        <br>
+    </form>
+    <div>
+        <button type="button" id="Continuar" class="Continuar">Continuar</button>
+    </div>
+    <script src="../JS/exploracion.js"></script>
+</body>
+
+
+
+</html>

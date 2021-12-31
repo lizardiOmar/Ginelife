@@ -25,5 +25,3 @@ CREATE TABLE `ginelife`.`pacientes` (
  PRIMARY KEY (`idPacientes`));
 ALTER TABLE pacientes
 ADD FOREIGN KEY (idDoctora) REFERENCES doctoras(idDoctoras);
-ALTER TABLE `ginelife`.`pacientes` 
-CHANGE COLUMN `EstadoCivil` `EstadoCivil` VARCHAR(55) NOT NULL ;

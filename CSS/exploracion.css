@@ -1,0 +1,70 @@
+body{
+    background-color: rgb(243, 147, 219);
+    font-family: "Anton", sans-serif;
+}
+form{
+    width: 800px;
+    margin: auto;
+    padding: 10px;
+}
+#consciente{
+    width: 5%;
+}
+#habitus{
+    width: 35%;
+}
+#peso, #estatura{
+    width: 10%;
+}
+#pulmonesP, #corazonP, #cabezaP, #cuelloP{
+    width: 20%;
+    display: inline-block;
+}
+#ta, #fc, #fr, #temperatura{
+    width: 12%;
+}
+
+#pulmonB, #corazonB, #cabezaB, #cuelloB{
+    width: 25%;
+}
+#pulmonT, #corazonT, #cabezaT, #cuelloT{
+    width: 50%;
+}
+button{
+    border: none;
+    width: 20%;
+    margin: auto;
+    padding: 5px;
+    font-family: "Anton", sans-serif;
+    color: black;
+    letter-spacing: 5px;
+    align-content: center;
+    font-size: 25px;
+}
+button.Continuar{
+    background-color: pink;
+}
+button.Continuar:hover{
+    background-color: rgb(177, 133, 140);
+    color:white;
+}
+div{
+    text-align: center;
+}
+input{
+    background-color: rgba(245, 168, 226, 0.979);
+    color: darkmagenta;
+}
+h1{
+    color: black;
+    letter-spacing: 5px;
+    font-size: 30px;
+    text-shadow: 2px 2px white;
+    text-align: center;
+}
+@font-face {
+    font-family: 'Anton';
+    src: url('../fonts/Anton-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}

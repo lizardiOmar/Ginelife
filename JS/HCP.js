@@ -16,6 +16,9 @@ var alergias;
 var quirurgicos;
 var traumaticos;
 var padecimientos;
+var exploracion;
+var estudios;
+var plan;
 //Obtener historia clinica
 axios.get('http://localhost/PHP/HistoriaClinicaController.php?idHistoriaClinica='+idHistoriaClinica).then(function (response) {
     console.log("HISTORIA CLINICA");
@@ -222,6 +225,58 @@ axios.get('http://localhost/PHP/HistoriaClinicaController.php?idHistoriaClinica=
             }
 
         })
+        //Obtener exploración del paciente
+        axios.get('http://localhost/PHP/ExploracionController.php?idHistoriaClinica='+idHistoriaClinica).then(function (response) {
+            console.log("Exploración");
+            exploracion=JSON.parse(JSON.stringify(response.data));
+            if(exploracion!=null){
+                var L1=document.getElementById('L1');
+                var conciente;
+                if(exploracion[0].consciente==1){
+                    conciente='SI';
+                }else if(exploracion[0].consciente==0){
+                    conciente='NO';
+                }
+                var pulmonesB;
+                if(exploracion[0].pulmonesB==1){
+                    pulmonesB='NORMAL';
+                }else if(exploracion[0].pulmonesB==0){
+                    pulmonesB='ANORMAL';
+                }
+                var corazonB;
+                if(exploracion[0].corazonB==1){
+                    corazonB='NORMAL';
+                }else if(exploracion[0].corazonB==0){
+                    corazonB='ANORMAL';
+                }
+                var cabezaB;
+                if(exploracion[0].cabezaB==1){
+                    cabezaB='NORMAL';
+                }else if(exploracion[0].cabezaB==0){
+                    cabezaB='NORMAL';
+                }
+
+                var cuelloB;
+                if(exploracion[0].cuelloB==1){
+                    cuelloB='NORMAL';
+                }else if(exploracion[0].cuelloB==0){
+                    cuelloB='NORMAL';
+                }
+                L1.innerHTML='Conciente: '+conciente+'|Habitus: '+exploracion[0].habitus;
+                var L2=document.getElementById('L2');
+                L2.innerHTML='Peso: '+exploracion[0].peso+'kg |Estatura: '+exploracion[0].estatura+'cm | T.A. '+exploracion[0].TA+'mm Hg. | F.C. '+exploracion[0].FC+' por min.';
+                var L3=document.getElementById('L3');
+                L3.innerHTML='F:R '+exploracion[0].FR+' por min. | Temperatura: '+exploracion[0].temperatura+'°C';
+                var L4=document.getElementById('L4');
+                L4.innerHTML='Pulmones: '+pulmonesB+', '+exploracion[0].pulmonesT;
+                var L5=document.getElementById('L5');
+                L5.innerHTML='Corazón: '+corazonB+', '+exploracion[0].corazonT;
+                var L6=document.getElementById('L6');
+                L6.innerHTML='Cabeza: '+cabezaB+', '+exploracion[0].cabezaT;
+                var L7=document.getElementById('L7');
+                L7.innerHTML='Cuello: '+cuelloB+', '+exploracion[0].cuelloT;
+            }
+        })
         //Obtener padecimientos actuales
         axios.get('http://localhost/PHP/PadecimientoActualController.php?idHistoriaClinica='+idHistoriaClinica).then(function (response) {
             console.log("Padecimientos actuales");
@@ -243,6 +298,35 @@ axios.get('http://localhost/PHP/HistoriaClinicaController.php?idHistoriaClinica=
                 var item = document.createElement('p');
                 item.innerHTML="Sin alergias registradas.";
                 padecimientos_list.appendChild(item);
+            }
+
+        })
+        //Obtener estudios de laboratorio
+        axios.get('http://localhost/PHP/EstudiosLController.php?idHistoriaClinica='+idHistoriaClinica).then(function (response) {
+            console.log("Padecimientos actuales");
+            estudios=JSON.parse(JSON.stringify(response.data));
+            var estudios_list=document.getElementById('estudios_list');
+            if(estudios!=null){
+                var L8=document.getElementById('L8');
+                L8.innerHTML='Grupo sanguíneo '+estudios[0].grupoSanguineo+' | RH '+estudios[0].RH+' | Hemoglobina '+estudios[0].hemoglobina+' g/dl';
+                var L9=document.getElementById('L9');
+                L9.innerHTML='Hematocrito '+estudios[0].Hematocrito+'% | Leucocitos '+estudios[0].Leucocitos+' | Plaquetas '+estudios[0].Plaquetas;
+                var L10=document.getElementById('L10');
+                L10.innerHTML='T:P '+estudios[0].TP+' | T.P.T. '+estudios[0].TP+' | Glúcosa '+estudios[0].Glucosa+' | VDRL '+estudios[0].VDRL+'Acs | Anti HIV '+estudios[0].HIV;
+
+            }
+
+        })
+        //Obtener plan
+        axios.get('http://localhost/PHP/PlanController.php?idHistoriaClinica='+idHistoriaClinica).then(function (response) {
+            console.log("Padecimientos actuales");
+            plan=JSON.parse(JSON.stringify(response.data));
+            var estudios_plan=document.getElementById('plan_list');
+            if(plan!=null){
+                var L11=document.getElementById('L11');
+                L11.innerHTML='Plan: '+plan[0].planManejo;
+                var L12=document.getElementById('L12');
+                L12.innerHTML='Pronóstico: '+plan[0].pronostico;
             }
 
         })

@@ -8,22 +8,21 @@
         <link rel='stylesheet' type='text/css' media='screen' href='../CSS/AntecedentesPersonalesTraumaticos.css'>
     </head>
     <body>
-        <h1 id="tituloH1">Padecimento actual</h1>
+        <h1 id="tituloH1"></h1>
         <form>
             <br>
-            <label for="Nombre">Nombre:</label>
+            <label for="planManejo">Plan de manejo:</label>
             <br>
-            <input type="text" name="Nombre" id="Nombre" placeholder="Nombre del padecimiento" required>
+            <textarea cols="40" rows="5" name="planManejo" id="planManejo" placeholder="Plan de manejo" required></textarea>
             <br>     
-            <label for="Descripcion">Descripción:</label>
+            <label for="pronostico">Pronóstico:</label>
             <br>
-            <textarea cols="40" rows="5" name="Descripcion" id="Descripcion" placeholder="Descripción del padecimiento" required></textarea>
+            <textarea cols="40" rows="5" name="pronostico" id="pronostico" placeholder="Pronóstico" required></textarea>
             <br>
         </form>
         <div>
             <button type="button" id="Continuar" class="Continuar">Continuar</button>
-            <button type="button" id="Otro" class="Otro">Otro</button>
         </div>
-        <script src="../JS/PadecimientoActual.js"></script>
+        <script src="../JS/Plan.js"></script>
     </body>
 </html>
