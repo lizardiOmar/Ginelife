@@ -1,0 +1,30 @@
+body{
+    background-color: pink;
+    background-image: url("../IMG/Logo.png");
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+    text-align: center;
+    letter-spacing: 5px;
+}
+@font-face {
+    font-family: 'Anton';
+    src: url('../fonts/Anton-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+button{
+    border: none;
+    margin: auto;
+    font-family: "Anton", sans-serif;
+    color: black;
+    letter-spacing: 5px;
+    align-content: center;
+    font-size: 15px;
+}
+button.volver{
+    background-color: red;
+}
+button:hover{
+    background-color: gray;
+    color:white;
+}

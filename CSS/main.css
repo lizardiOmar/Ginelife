@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(243, 147, 219);
+    background-color: pink;
 }
 
 header{
@@ -55,7 +55,7 @@ button.misPacientes:hover{
     background-color: rgb(146, 12, 139);
 }
 button.pacienteNuevo{
-    background-color: pink;
+    background-color: rgb(252, 172, 185);
 }
 button.pacienteNuevo:hover{
     background-color: rgb(177, 133, 140);
