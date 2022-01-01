@@ -1,6 +1,4 @@
-if (window.print) { 
-    //window.print(); 
-} 
+
 let params = new URLSearchParams(location.search);
 var idHistoriaClinica = params.get('idHistoriaClinica');
 var historiaClinica;
@@ -19,6 +17,7 @@ var padecimientos;
 var exploracion;
 var estudios;
 var plan;
+var host="C:/Users/heand/Desktop/GINELIFE";
 //Obtener historia clinica
 axios.get('http://localhost/PHP/HistoriaClinicaController.php?idHistoriaClinica='+idHistoriaClinica).then(function (response) {
     console.log("HISTORIA CLINICA");
@@ -26,6 +25,20 @@ axios.get('http://localhost/PHP/HistoriaClinicaController.php?idHistoriaClinica=
     console.log(historiaClinica);
     var fecha_hora=document.getElementById('fecha_hora');
     fecha_hora.innerHTML='Fecha de elaboración: '+historiaClinica.DD+'-'+historiaClinica.MM+'-'+historiaClinica.YYYY+' Hora: '+historiaClinica.hora;
+    document.getElementById('imprimir').addEventListener('click', imprimir);
+    document.getElementById('finalizar').addEventListener('click', finalizar);
+    function imprimir(e){
+        document.getElementById('imprimir').style.visibility = 'hidden';
+        document.getElementById('finalizar').style.visibility = 'hidden';
+        window.print();
+        setTimeout(function () { 
+            document.getElementById('imprimir').style.visibility = 'visible';
+            document.getElementById('finalizar').style.visibility = 'visible';
+        }, 100);
+    }
+    function finalizar(e){
+        window.location.href = host+"/HTML/Main.html?correo="+doctora.Email;
+    }
     //Obtener datos del paciente
     axios.get('http://localhost/PHP/PacienteController.php?idPaciente='+historiaClinica.idPaciente).then(function (response) {
         console.log("PACIENTE");

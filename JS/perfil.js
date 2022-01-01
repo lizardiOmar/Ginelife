@@ -23,10 +23,7 @@ function salir(e) {
     window.location.href = "C:/Users/heand/Desktop/GINELIFE/HTML/Login.html";
 }
 
-document.getElementById('Citas').addEventListener('click', misCitas);
-function misCitas(e) {
-    alert("Cargando sus próximas citas, Dra. "+doctora.Nombres+".");
-}
+
 
 document.getElementById('Paciente_nuevo').addEventListener('click', nuevoPaciente);
 function nuevoPaciente(e) {
@@ -37,4 +34,5 @@ function nuevoPaciente(e) {
 document.getElementById('Pacientes').addEventListener('click', Pacientes);
 function Pacientes(e) {
     alert("Ver todos los pacientes de la Dra. "+doctora.Nombres);
+    window.location.href = "C:/Users/heand/Desktop/GINELIFE/HTML/Pacientes.html?idDoctora="+doctora.idDoctora;
 }
