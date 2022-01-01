@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name='NUEVA PACIENTE' content='width=device-width, initial-scale=1'>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel='stylesheet' type='text/css' media='screen' href='../CSS/colposcopia.css'>
+    </head>
+<body>
+    
+    
+    <form action="http://localhost/PHP/ColposcopiaController.php" method="post" enctype="multipart/form-data">
+        Select image to upload:
+        <input type="file" name="upload[]" id="imagenes" multiple/>
+        <button type="button" id="submit_btn">Subir</button>
+    </form>
+    <script src="../JS/fotosColposcopia.js"></script>
+</body>
+</html>
