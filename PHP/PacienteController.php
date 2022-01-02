@@ -30,6 +30,10 @@
 			) {
 				Paciente::getPacienteByID($_GET['idPaciente']);
 			}
+			if (isset($_GET['idDoctora'])) {
+				Paciente::getPacientesByDoctor($_GET['idDoctora']);
+			}
+			
 		break;
 	}
 

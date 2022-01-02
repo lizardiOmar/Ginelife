@@ -63,10 +63,29 @@
 				return $response;
 			}
 		}
+		public static function getPacientesByDoctor($idDoctora){
+			$response = null;
+			$sql = "SELECT * FROM pacientes where idDoctora=$idDoctora order by Apellidos asc;";
+			try {
+				$conn=new conexion();
+				$stmt = $conn->getConexion()->query($sql);
+				$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+				while ($row = $stmt->fetch()) {
+					$response[] = $row;
+				}
+				echo json_encode($response);
+			} catch (PDOException $e) {
+				$response = array(
+					"estado"=>"FALLIDO",
+					"direccion"=>"NULL"
+				);
+				echo json_encode($response);
+			}
+		}
 		public static function getPacienteByID($idPaciente){
 			$response=null;
 			$conn=new Conexion();
-			$query="SELECT * FROM pacientes where idPacientes='$idPaciente'";
+			$query="SELECT * FROM pacientes where idPacientes=$idPaciente";
 			try{
 				$stmt=$conn->getConexion()->query($query);
 				$result=$stmt->setFetchMode(PDO::FETCH_NUM);

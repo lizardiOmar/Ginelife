@@ -55,6 +55,25 @@
 				return json_encode($response);
 			}
 		}
+		public static function getHistoriaClinicaByPaciente($idPaciente){
+			$response = null;
+			$sql = "SELECT * FROM historiaClinica where idPaciente=$idPaciente;";
+			try {
+				$conn=new conexion();
+				$stmt = $conn->getConexion()->query($sql);
+				$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+				while ($row = $stmt->fetch()) {
+					$response[] = $row;
+				}
+				echo json_encode($response);
+			} catch (PDOException $e) {
+				$response = array(
+					"estado"=>"FALLIDO",
+					"direccion"=>"NULL"
+				);
+				echo json_encode($e);
+			}
+		}
 		public static function getHistoriaClinicaById($idHistoriaClinica){
 			$response = null;
 			$conn=new Conexion();

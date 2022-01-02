@@ -25,6 +25,11 @@
 			){
 				HistoriaClinica::getHistoriaClinicaById($_GET['idHistoriaClinica']);
 			}
+			if (
+				isset($_GET['idPaciente'])
+			){
+				HistoriaClinica::getHistoriaClinicaByPaciente($_GET['idPaciente']);
+			}
 	}
 
 ?>
